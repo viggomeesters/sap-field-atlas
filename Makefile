@@ -1,4 +1,4 @@
-.PHONY: check validate audit test guard package diff-check
+.PHONY: check validate audit test guard package gap-report diff-check
 
 check: guard validate audit test diff-check
 
@@ -16,6 +16,9 @@ test:
 
 package:
 	uv build
+
+gap-report:
+	python3 scripts/atlas_gap_report.py
 
 diff-check:
 	git diff --check

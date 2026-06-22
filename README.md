@@ -48,6 +48,14 @@ Or run the full local gate:
 make check
 ```
 
+To find the next data-growth slice:
+
+```bash
+make gap-report
+```
+
+See `docs/ATLAS_FILL_LOOP.md` for the gap → fill → validate → review loop.
+
 ## Use it as agent context
 
 Give your agent this instruction after cloning or opening the repository:

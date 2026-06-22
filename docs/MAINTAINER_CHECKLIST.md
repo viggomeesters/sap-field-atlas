@@ -6,6 +6,7 @@ Use this checklist before tagging a public release or calling the repository com
 
 ```bash
 make check
+make gap-report
 make package
 ```
 
