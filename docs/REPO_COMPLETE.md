@@ -18,7 +18,6 @@ Applied from Viggo's `viggo-agent-skills` operating conventions to this public r
 ## Operations
 
 - [x] `Makefile` exposes one command: `make check`.
-- [x] CI runs `make check` on push and PR.
 - [x] PR template includes validation and public-data checklist.
 - [x] CODEOWNERS routes review to `@viggomeesters`.
 

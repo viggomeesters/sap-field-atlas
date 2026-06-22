@@ -7,7 +7,7 @@
 - [x] Executable validator and tests.
 - [x] Public safety and source/confidence policy.
 - [x] Agent explain skill and examples.
-- [x] Repo-complete guard, CI, PR template, architecture docs, and Makefile.
+- [x] Repo-complete guard, PR template, architecture docs, and Makefile.
 
 ## Next: source-backed coverage
 
