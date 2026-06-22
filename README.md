@@ -7,6 +7,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB.svg)](pyproject.toml)
 [![Package: v0.1.0](https://img.shields.io/badge/package-v0.1.0-0F766E.svg)](https://github.com/viggomeesters/sap-field-atlas/releases/tag/v0.1.0)
+[![Public-safe](https://img.shields.io/badge/public--safe-no_customer_data-334155.svg)](SECURITY.md)
+[![Status: Alpha](https://img.shields.io/badge/status-alpha-F59E0B.svg)](CHANGELOG.md)
 
 ## Why this exists
 
@@ -108,10 +110,15 @@ assets/         README/social hero assets
 
 This is **not official SAP documentation** and does not mirror proprietary SAP content. Use source references and confidence labels. Do not add client names, customer exports, screenshots, internal URLs, project-specific mappings, or data copied from customer systems.
 
+SAP Field Atlas is independent and not affiliated with SAP SE. See `NOTICE.md` for the trademark and affiliation notice.
+
 See:
 
 - `CONTRIBUTING.md`
 - `SECURITY.md`
+- `SUPPORT.md`
+- `CODE_OF_CONDUCT.md`
+- `NOTICE.md`
 - `docs/source-confidence-policy.md`
 
 ## Project status
@@ -121,6 +128,8 @@ SAP Field Atlas is public and standalone:
 - public repo: <https://github.com/viggomeesters/sap-field-atlas>
 - package/module/CLI: `sap-field-atlas` / `sap_field_atlas` / `sap-field-atlas`
 - current release: `v0.1.0`
+- changelog: `CHANGELOG.md`
+- maintainer checklist: `docs/MAINTAINER_CHECKLIST.md`
 
 This repository is separate from any SAP FO Knowledge Base or customer-specific project knowledge base.
 

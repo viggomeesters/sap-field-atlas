@@ -27,16 +27,22 @@ FORBIDDEN_PATHS = [
 ]
 REQUIRED_PUBLIC_REPO_FILES = [
     "AGENTS.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
     "CONTRIBUTORS.md",
+    "NOTICE.md",
     "SECURITY.md",
+    "SUPPORT.md",
     "Makefile",
     "assets/repo-hero.svg",
     "docs/ARCHITECTURE.md",
     "docs/HERO_GUIDELINES.md",
+    "docs/MAINTAINER_CHECKLIST.md",
     "docs/PACKAGE.md",
     "docs/REPO_COMPLETE.md",
     "docs/ROADMAP.md",
     ".github/pull_request_template.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
     ".github/CODEOWNERS",
 ]
 ALLOW_SELF = {Path("scripts/validate_repository.py")}
@@ -102,7 +108,15 @@ def check_public_boundary() -> None:
         if not (ROOT / rel).exists():
             fail(f"missing repo-complete public file: {rel}")
     readme = (ROOT / "README.md").read_text()
-    for required_phrase in ("![SAP Field Atlas repository hero]", "## Package and release", "## Contributors"):
+    for required_phrase in (
+        "![SAP Field Atlas repository hero]",
+        "## Package and release",
+        "## Contributors",
+        "SUPPORT.md",
+        "CODE_OF_CONDUCT.md",
+        "NOTICE.md",
+        "CHANGELOG.md",
+    ):
         if required_phrase not in readme:
             fail(f"README missing professional public surface section: {required_phrase}")
     hero = (ROOT / "assets" / "repo-hero.svg").read_text()

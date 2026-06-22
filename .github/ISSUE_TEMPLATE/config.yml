@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Public data safety boundary
+    url: https://github.com/viggomeesters/sap-field-atlas/blob/main/SECURITY.md
+    about: Read before reporting anything that may include sensitive customer or project data.
+  - name: Source confidence policy
+    url: https://github.com/viggomeesters/sap-field-atlas/blob/main/docs/source-confidence-policy.md
+    about: How SAP object facts should be labelled and sourced.

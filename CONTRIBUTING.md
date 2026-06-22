@@ -30,10 +30,9 @@ MVP focuses on transactions, tables, fields, labels/aliases, relationships, Migr
 
 1. Add or edit YAML under `data/`.
 2. Include `confidence` and `source_refs` where the contract supports it.
-3. Run:
+3. Follow `CODE_OF_CONDUCT.md` and `SUPPORT.md` for public interaction boundaries.
+4. Run the full gate:
 
 ```bash
-uv run sap-field-atlas validate
-uv run sap-field-atlas audit-completeness
-uv run pytest -q
+make check
 ```

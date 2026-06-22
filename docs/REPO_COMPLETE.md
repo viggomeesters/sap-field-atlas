@@ -12,10 +12,19 @@ Applied from Viggo's `viggo-agent-skills` operating conventions to this public r
 
 - [x] Repository About/description is useful and specific.
 - [x] Repository topics are set for discoverability.
-- [x] README has a professional hero, badges, problem statement, quick start, examples, package/release section, safety boundary, and contributors link.
+- [x] README has a professional hero, badges, problem statement, quick start, examples, package/release section, safety boundary, project status, and contributors link.
 - [x] `assets/repo-hero.svg` gives the repo a visual identity.
 - [x] `docs/HERO_GUIDELINES.md` defines visual QA requirements: crisp at README scale, not zoomed out, not busy, no text overflow, no fuzzy filters/shadows.
 - [x] `CONTRIBUTORS.md` exists.
+
+## Governance and community hygiene
+
+- [x] `CHANGELOG.md` records public release history.
+- [x] `SUPPORT.md` defines support scope and no-SLA expectations.
+- [x] `CODE_OF_CONDUCT.md` defines contributor behavior and safety boundaries.
+- [x] `NOTICE.md` states SAP trademark/non-affiliation and public-data limitations.
+- [x] `.github/ISSUE_TEMPLATE/config.yml` disables blank issues and routes users to source/safety docs.
+- [x] `docs/MAINTAINER_CHECKLIST.md` gives a release/readiness checklist.
 
 ## Release and package
 
@@ -26,7 +35,7 @@ Applied from Viggo's `viggo-agent-skills` operating conventions to this public r
 
 ## Safety
 
-- [x] Public-data boundary documented in `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `AGENTS.md`.
+- [x] Public-data boundary documented in `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, and `AGENTS.md`.
 - [x] Source/confidence policy exists.
 - [x] Verified facts require `source_refs` in the validator.
 - [x] Repository guard rejects old FO-KB identity strings and repo-local workflow remnants.
@@ -43,4 +52,4 @@ Applied from Viggo's `viggo-agent-skills` operating conventions to this public r
 - [x] Agent instructions in `AGENTS.md`.
 - [x] Explain skill in `skills/explain-sap-object.md`.
 - [x] Example outputs in `examples/`.
-- [x] Architecture and roadmap docs in `docs/`.
+- [x] Architecture, roadmap, package, hero, source-confidence, and maintainer docs in `docs/`.
