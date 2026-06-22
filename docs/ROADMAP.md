@@ -8,6 +8,7 @@
 - [x] Public safety and source/confidence policy.
 - [x] Agent explain skill and examples.
 - [x] Repo-complete guard, PR template, architecture docs, and Makefile.
+- [x] Professional GitHub surface: About/topics, hero, README, contributors, release, and package artifacts.
 
 ## Next: source-backed coverage
 

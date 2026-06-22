@@ -8,6 +8,21 @@ Applied from Viggo's `viggo-agent-skills` operating conventions to this public r
 - [x] Explicitly separated from SAP FO Knowledge Base.
 - [x] `AGENTS.md` tells agents not to add repo-local workflow runtime state.
 
+## Public GitHub surface
+
+- [x] Repository About/description is useful and specific.
+- [x] Repository topics are set for discoverability.
+- [x] README has a professional hero, badges, problem statement, quick start, examples, package/release section, safety boundary, and contributors link.
+- [x] `assets/repo-hero.svg` gives the repo a visual identity.
+- [x] `CONTRIBUTORS.md` exists.
+
+## Release and package
+
+- [x] `v0.1.0` release exists.
+- [x] Python wheel and source distribution are built and attached to the release.
+- [x] `docs/PACKAGE.md` documents build/install/verify flow.
+- [x] `Makefile` exposes `make package`.
+
 ## Safety
 
 - [x] Public-data boundary documented in `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `AGENTS.md`.
@@ -17,9 +32,10 @@ Applied from Viggo's `viggo-agent-skills` operating conventions to this public r
 
 ## Operations
 
-- [x] `Makefile` exposes one command: `make check`.
+- [x] `Makefile` exposes one full local gate: `make check`.
 - [x] PR template includes validation and public-data checklist.
 - [x] CODEOWNERS routes review to `@viggomeesters`.
+- [x] No GitHub Actions workflow is included by default; local `make check` is canonical unless CI is explicitly requested.
 
 ## Agent usability
 

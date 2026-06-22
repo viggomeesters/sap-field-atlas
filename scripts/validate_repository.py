@@ -25,6 +25,19 @@ FORBIDDEN_PATHS = [
     "go_workflow",
     "tasks.md",
 ]
+REQUIRED_PUBLIC_REPO_FILES = [
+    "AGENTS.md",
+    "CONTRIBUTORS.md",
+    "SECURITY.md",
+    "Makefile",
+    "assets/repo-hero.svg",
+    "docs/ARCHITECTURE.md",
+    "docs/PACKAGE.md",
+    "docs/REPO_COMPLETE.md",
+    "docs/ROADMAP.md",
+    ".github/pull_request_template.md",
+    ".github/CODEOWNERS",
+]
 ALLOW_SELF = {Path("scripts/validate_repository.py")}
 
 
@@ -84,6 +97,13 @@ def check_yaml_contracts() -> None:
 
 
 def check_public_boundary() -> None:
+    for rel in REQUIRED_PUBLIC_REPO_FILES:
+        if not (ROOT / rel).exists():
+            fail(f"missing repo-complete public file: {rel}")
+    readme = (ROOT / "README.md").read_text()
+    for required_phrase in ("![SAP Field Atlas repository hero]", "## Package and release", "## Contributors"):
+        if required_phrase not in readme:
+            fail(f"README missing professional public surface section: {required_phrase}")
     for rel, path in iter_text_files():
         if rel in ALLOW_SELF:
             continue

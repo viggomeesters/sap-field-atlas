@@ -1,4 +1,4 @@
-.PHONY: check validate audit test guard diff-check
+.PHONY: check validate audit test guard package diff-check
 
 check: guard validate audit test diff-check
 
@@ -13,6 +13,9 @@ audit:
 
 test:
 	uv run pytest -q
+
+package:
+	uv build
 
 diff-check:
 	git diff --check

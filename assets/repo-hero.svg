@@ -1,0 +1,35 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">SAP Field Atlas</title>
+  <desc id="desc">Agent-ready SAP data migration knowledge contracts for transactions, tables, fields, labels, relationships, and migration templates.</desc>
+  <rect width="1280" height="640" fill="#0B1020"/>
+  <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 108) rotate(132.4) scale(724 586)">
+    <stop stop-color="#38BDF8" stop-opacity="0.55"/>
+    <stop offset="0.56" stop-color="#2563EB" stop-opacity="0.18"/>
+    <stop offset="1" stop-color="#0B1020" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1280" height="640" fill="url(#g1)"/>
+  <path d="M118 448C210 360 278 406 356 318C436 228 502 250 582 192C676 124 770 152 868 104" stroke="#38BDF8" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <path d="M118 498C206 438 290 458 370 398C454 336 534 360 618 304C720 236 804 256 934 198" stroke="#93C5FD" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+  <g opacity="0.72" stroke="#334155">
+    <path d="M0 520H1280"/><path d="M0 440H1280"/><path d="M0 360H1280"/><path d="M0 280H1280"/><path d="M0 200H1280"/><path d="M0 120H1280"/>
+    <path d="M160 0V640"/><path d="M320 0V640"/><path d="M480 0V640"/><path d="M640 0V640"/><path d="M800 0V640"/><path d="M960 0V640"/><path d="M1120 0V640"/>
+  </g>
+  <g transform="translate(94 96)">
+    <rect x="0" y="0" width="238" height="42" rx="21" fill="#0F172A" stroke="#38BDF8" stroke-opacity="0.7"/>
+    <text x="22" y="27" fill="#BAE6FD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">PUBLIC KNOWLEDGE CONTRACTS</text>
+    <text x="0" y="118" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="74" font-weight="800" letter-spacing="-2.6">SAP Field Atlas</text>
+    <text x="0" y="168" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="27" font-weight="500">Agent-ready SAP data migration knowledge base</text>
+    <text x="0" y="216" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22">Transactions · Tables · Fields · Labels · Relationships · Migration templates</text>
+    <g transform="translate(0 286)">
+      <rect width="180" height="64" rx="14" fill="#111827" stroke="#1E40AF"/>
+      <text x="20" y="28" fill="#60A5FA" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">TABLE</text>
+      <text x="20" y="50" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="800">MARA</text>
+      <rect x="210" width="210" height="64" rx="14" fill="#111827" stroke="#1E40AF"/>
+      <text x="230" y="28" fill="#60A5FA" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">FIELD</text>
+      <text x="230" y="50" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="800">MARA-MATNR</text>
+      <rect x="450" width="238" height="64" rx="14" fill="#111827" stroke="#1E40AF"/>
+      <text x="470" y="28" fill="#60A5FA" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700">TEMPLATE LABEL</text>
+      <text x="470" y="50" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" font-weight="800">Product Number</text>
+    </g>
+  </g>
+</svg>

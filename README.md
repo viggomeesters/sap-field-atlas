@@ -1,40 +1,54 @@
 # SAP Field Atlas
 
-Project id: `sap-field-atlas`  
-Recommended public-facing name: **SAP Field Atlas** (`sap-field-atlas`).
+![SAP Field Atlas repository hero](assets/repo-hero.svg)
 
-SAP Field Atlas is a bare-bones, agent-ready knowledge base for SAP data migration consultants. It models the practical objects consultants use every day: SAP GUI transactions, Fiori apps, tables, fields, labels/aliases, relationships, value sources, and SAP Migration Cockpit template mappings.
+**SAP Field Atlas is an agent-ready SAP data migration knowledge base.** It turns practical SAP consultant knowledge — transaction codes, tables, fields, labels, value sources, relationships, and Migration Cockpit mappings — into small, validated YAML contracts that humans and AI agents can inspect without needing a live SAP system.
 
-## Problem
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB.svg)](pyproject.toml)
+[![Package: v0.1.0](https://img.shields.io/badge/package-v0.1.0-0F766E.svg)](https://github.com/viggomeesters/sap-field-atlas/releases/tag/v0.1.0)
 
-SAP data migration work constantly moves between ECC, S/4HANA, Fiori, SAP GUI, table exports, and Migration Cockpit templates. The same concept can appear as a table-field (`MARA-MATNR`), a business term (Material Number), a template field (Product Number), or language/context-specific labels. Consultants often keep this knowledge in personal notes; agents need it in structured contracts.
+## Why this exists
 
-## Audience
+SAP data migration work constantly crosses ECC, S/4HANA, SAP GUI, Fiori, table exports, and SAP Migration Cockpit templates. The same concept can appear as:
 
-- SAP data migration consultants
-- Functional consultants who need quick table/field/transaction explanations
-- AI agents that need a cloneable SAP data model context pack
+- a technical table-field id such as `MARA-MATNR`;
+- a business term such as **Material Number**;
+- a template label such as **Product Number**;
+- a context-specific export label or language-specific short/long label.
 
-## Agent-ready approach
+Consultants often keep this mapping knowledge in personal notes. Agents need it in structured, source-aware contracts. SAP Field Atlas is the public, generic version of that context pack.
 
-The repository is intentionally data-first. YAML files under `data/` hold the knowledge. Python validation and tests make the contracts safe to consume. A cloned repo should be enough for an agent to answer questions such as:
+## What is in the first release
 
-- Explain `SE16N`.
-- Explain `MARA-MATNR`.
-- Which labels can refer to Material Number / Product Number?
-- Which table/field does a Migration Cockpit template field map to?
+The first release is intentionally small, but complete enough to clone, validate, and extend:
 
-## Public safety
+- YAML collections for transactions, Fiori apps, tables, fields, migration templates, domains/value sources, and relationships.
+- Seed objects for `SE16N`, `SE11`, `MARA`, `MARA-MATNR`, and `T001-BUKRS`.
+- A validation CLI that catches broken references, duplicate ids, invalid confidence labels, and unsafe verified facts without source refs.
+- An agent answer contract in `skills/explain-sap-object.md`.
+- Example explanations for `SE16N` and `MARA-MATNR`.
+- Public-data guardrails for source confidence and customer-data safety.
 
-This is **not official SAP documentation** and does not mirror proprietary SAP content. Use source references and confidence labels. Do not add client names, customer exports, screenshots, internal URLs, project-specific mappings, or data copied from customer systems.
+## Quick start
 
-## Current status
+```bash
+git clone https://github.com/viggomeesters/sap-field-atlas.git
+cd sap-field-atlas
+uv run sap-field-atlas validate
+uv run sap-field-atlas audit-completeness
+uv run pytest -q
+```
 
-Skeleton initialized locally in WSL at `/home/viggo/github/sap-field-atlas`. Public repository: <https://github.com/viggomeesters/sap-field-atlas>. The local project id/package name remains `sap-field-atlas`; the public-facing repository name is `sap-field-atlas`.
+Or run the full local gate:
 
-## How to feed this repo to an agent
+```bash
+make check
+```
 
-Clone or open the repo and give the agent this instruction:
+## Use it as agent context
+
+Give your agent this instruction after cloning or opening the repository:
 
 ```text
 Use this repository as SAP Field Atlas context. For questions about transaction codes, tables, TABLE-FIELD ids, Fiori apps, Migration Cockpit labels, aliases, and SAP value sources, inspect data/*.yaml first. Use skills/explain-sap-object.md as the answer contract. Distinguish technical names from business/template labels and surface confidence/needs_verification instead of guessing.
@@ -45,41 +59,71 @@ Lookup pattern:
 - transaction code → `data/transactions.yaml`
 - `TABLE-FIELD` → `data/fields.yaml`
 - table name → `data/tables.yaml`
-- template label → `data/migration_templates.yaml` + field labels
+- template label → `data/migration_templates.yaml` plus field labels
 - value source/customizing → `data/domains.yaml`
 - graph context → `data/relationships.yaml`
 
-Examples:
+## Example questions
 
-- `examples/explain-se16n.md`
-- `examples/explain-mara-matnr.md`
+- Explain `SE16N`.
+- Explain `MARA-MATNR`.
+- Which labels can refer to Material Number / Product Number?
+- Is Company Code free text or customizing-managed?
+- Which table-field does a Migration Cockpit template field map to?
 
-## Commands
+## Package and release
 
-Recommended full gate:
+Release `v0.1.0` includes Python package artifacts attached to the GitHub release:
+
+- wheel: `sap_field_atlas-0.1.0-py3-none-any.whl`
+- source distribution: `sap_field_atlas-0.1.0.tar.gz`
+
+Build locally with:
 
 ```bash
-make check
+make package
 ```
 
-Individual commands:
+Install directly from GitHub source with:
 
 ```bash
-uv run sap-field-atlas validate
-uv run sap-field-atlas audit-completeness
-uv run pytest -q
+python -m pip install git+https://github.com/viggomeesters/sap-field-atlas.git@v0.1.0
 ```
 
-See `docs/REPO_COMPLETE.md` for the repository-complete checklist.
-
-## Layout
+## Repository layout
 
 ```text
 data/           YAML knowledge contracts
 schemas/        human-readable schema contracts
 examples/       example agent answers
 skills/         agent prompt/skill snippets
-scripts/        helper scripts
-src/            validator/CLI
+scripts/        repository guard and helper scripts
+src/            Python validator/CLI
 tests/          regression tests
+docs/           architecture, roadmap, source policy, repo-complete notes
+assets/         README/social hero assets
 ```
+
+## Public safety
+
+This is **not official SAP documentation** and does not mirror proprietary SAP content. Use source references and confidence labels. Do not add client names, customer exports, screenshots, internal URLs, project-specific mappings, or data copied from customer systems.
+
+See:
+
+- `CONTRIBUTING.md`
+- `SECURITY.md`
+- `docs/source-confidence-policy.md`
+
+## Project status
+
+SAP Field Atlas is public and standalone:
+
+- public repo: <https://github.com/viggomeesters/sap-field-atlas>
+- package/module/CLI: `sap-field-atlas` / `sap_field_atlas` / `sap-field-atlas`
+- current release: `v0.1.0`
+
+This repository is separate from any SAP FO Knowledge Base or customer-specific project knowledge base.
+
+## Contributors
+
+See `CONTRIBUTORS.md`.
