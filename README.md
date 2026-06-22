@@ -1,8 +1,15 @@
 # SAP Field Atlas
 
+> **Archived legacy seed.** SAP Field Atlas has been absorbed into
+> [SAP Agent Context](https://github.com/viggomeesters/sap-agent-context), the
+> canonical clone target for AI agents that need SAP field mapping, workflow,
+> functional design, source/freshness metadata, and context bundle contracts.
+> This repository remains public only as a source/provenance pointer for the
+> original field/table/migration-cockpit seed data.
+
 ![SAP Field Atlas repository hero](assets/repo-hero.svg)
 
-**SAP Field Atlas is an agent-ready SAP data migration knowledge base.** It turns practical SAP consultant knowledge — transaction codes, tables, fields, labels, value sources, relationships, and Migration Cockpit mappings — into small, validated YAML contracts that humans and AI agents can inspect without needing a live SAP system.
+**SAP Field Atlas was an agent-ready SAP data migration knowledge base.** It turns practical SAP consultant knowledge — transaction codes, tables, fields, labels, value sources, relationships, and Migration Cockpit mappings — into small, validated YAML contracts that humans and AI agents can inspect without needing a live SAP system.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-3776AB.svg)](pyproject.toml)
