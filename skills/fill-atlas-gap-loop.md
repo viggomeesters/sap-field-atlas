@@ -4,7 +4,11 @@ Use this when an agent is asked to grow SAP Field Atlas.
 
 ## Instruction
 
-Follow `docs/ATLAS_FILL_LOOP.md` exactly. Work in one small vertical slice:
+Follow `docs/ATLAS_FILL_LOOP.md` exactly. If invoked through Viggo's `go-loop`, treat `go-loop` as the execution orchestrator and this skill as the SAP Field Atlas domain protocol.
+
+For multi-slice campaigns, use `docs/templates/go-loop-atlas-campaign.md` and keep AW Lite/go-loop runtime state outside this repo.
+
+Work in one small vertical slice:
 
 1. Run `make gap-report`.
 2. Select or confirm one gap.

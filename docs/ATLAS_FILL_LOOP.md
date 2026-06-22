@@ -10,6 +10,27 @@ It is designed for agents and maintainers. The loop starts with a **gap**, adds 
 GAP → SCOPE → COLLECT → MODEL → LINK → VALIDATE → EXPLAIN → REVIEW → SHIP → NEXT GAP
 ```
 
+## Relationship to Viggo's `go-loop`
+
+This document is the **domain protocol**. Viggo's `go-loop` is the **execution orchestrator**.
+
+```text
+go-loop = campaign/task runner with attempts, critic, checkpoints, stop policy
+Atlas Fill Loop = SAP Field Atlas domain steps and gates
+```
+
+Use them together like this:
+
+1. `go-loop designer` reads this document and `make gap-report`.
+2. It proposes child slices: one SAP object/gap per child task.
+3. `go-loop plan` or `go-loop task` executes children one at a time.
+4. Each child runs build → verify → critic → repair up to the configured attempt limit.
+5. After every child, run `make gap-report` again and select the next slice.
+
+Do **not** store go-loop/AW Lite runtime state in this repository. Durable task, plan, and attempt evidence belongs in Viggo's vault-first Agent Workflow Lite runtime under `system/agent-workflow/`. This repo only provides the domain protocol, gates, templates, and examples.
+
+Use `docs/templates/go-loop-atlas-campaign.md` as the reusable campaign brief.
+
 ## 0. Inputs
 
 A loop run should start from one of these inputs:

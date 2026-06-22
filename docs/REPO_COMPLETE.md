@@ -55,6 +55,7 @@ Applied from Viggo's `viggo-agent-skills` operating conventions to this public r
 - [x] Example outputs in `examples/`.
 - [x] `docs/ATLAS_FILL_LOOP.md` defines gap → scope → collect → model → link → validate → explain → review → ship → next gap.
 - [x] `docs/templates/atlas-fill-task.md` gives a small-slice task template.
+- [x] `docs/templates/go-loop-atlas-campaign.md` gives a go-loop designer/campaign brief for multi-slice runs.
 - [x] `.github/ISSUE_TEMPLATE/fill-atlas-gap.md` captures public-safe gap requests.
 - [x] `make gap-report` provides the next-loop planning signal.
 - [x] Architecture, roadmap, package, hero, source-confidence, and maintainer docs in `docs/`.

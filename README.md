@@ -54,7 +54,7 @@ To find the next data-growth slice:
 make gap-report
 ```
 
-See `docs/ATLAS_FILL_LOOP.md` for the gap → fill → validate → review loop.
+See `docs/ATLAS_FILL_LOOP.md` for the gap → fill → validate → review loop. If you are running this with Viggo's `go-loop`, use `docs/templates/go-loop-atlas-campaign.md` as the campaign brief.
 
 ## Use it as agent context
 
