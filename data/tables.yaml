@@ -1,0 +1,31 @@
+- name: MARA
+  business_object: Material Master
+  module: MM
+  system_scope: both
+  description: General material data table used as a core Material Master/Product
+    anchor.
+  key_fields:
+  - MARA-MATNR
+  common_transactions:
+  - SE16N
+  - SE11
+  related_tables: []
+  migration_relevance: Core material/product identifier context for ECC to S/4 migration
+    analysis.
+  confidence: known_from_experience
+  source_refs: []
+- name: T001
+  business_object: Company Code
+  module: FI
+  system_scope: both
+  description: Company code customizing table used as a financial/legal entity anchor.
+  key_fields:
+  - T001-BUKRS
+  common_transactions:
+  - SE16N
+  - SE11
+  related_tables: []
+  migration_relevance: Company code values are customizing-controlled lookup values
+    used across many migration objects.
+  confidence: known_from_experience
+  source_refs: []

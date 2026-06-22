@@ -1,0 +1,16 @@
+- template_id: s4-product-initial-seed
+  object: Product
+  variant: needs_verification
+  source_system: ECC
+  target_system: S4
+  fields:
+    - template_field: Product Number
+      canonical_field: MARA-MATNR
+      labels:
+        short: Product No.
+        long: Product Number
+      confidence: known_from_experience
+  notes:
+    - Verify for the relevant SAP Migration Cockpit version whether the template writes directly to tables or through S/4HANA structures/APIs.
+  confidence: needs_verification
+  source_refs: []

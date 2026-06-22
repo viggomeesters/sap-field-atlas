@@ -1,0 +1,11 @@
+schema: sap-field-atlas.relationship.v1
+required: [id, from, relationship_type, description, confidence, source_refs]
+identity: id
+fields:
+  id: stable relationship id
+  from: table, field, transaction, fiori app, template, or domain id
+  to: optional target object id
+  relationship_type: primary_key | foreign_key | text_table | customizing_lookup | domain | check_table | semantic_equivalent | transaction_access | template_mapping
+  description: relationship explanation
+  confidence: verified | known_from_experience | needs_verification
+  source_refs: list

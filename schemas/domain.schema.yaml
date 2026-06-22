@@ -1,0 +1,12 @@
+schema: sap-field-atlas.domain.v1
+required: [id, kind, description, confidence, source_refs]
+identity: id
+fields:
+  id: domain/check/customizing value source id
+  kind: domain | customizing | check_table | lookup_table | identifier | free_text
+  description: practical meaning
+  table: optional table id
+  field: optional field id
+  values: optional value examples; generic only, no client data
+  confidence: verified | known_from_experience | needs_verification
+  source_refs: list

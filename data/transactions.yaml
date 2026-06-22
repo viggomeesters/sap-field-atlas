@@ -1,0 +1,24 @@
+- code: SE16N
+  name: General Table Display
+  purpose: View and query SAP table data, often used by consultants for quick data lookup and exports.
+  category: data_viewer
+  systems: [ECC, S4]
+  relevant_for: [data_analysis, migration_checks, exports]
+  related_tables: [MARA]
+  notes:
+    - Practical consultant label: data viewer / table browser.
+    - Exact official naming can vary by SAP release and should be verified against the target system.
+  confidence: known_from_experience
+  source_refs: []
+
+- code: SE11
+  name: ABAP Dictionary
+  purpose: Inspect SAP Data Dictionary metadata such as tables, fields, data elements, and domains.
+  category: metadata
+  systems: [ECC, S4]
+  relevant_for: [metadata_lookup, field_analysis, technical_analysis]
+  related_tables: [MARA]
+  notes:
+    - Voice brief mentioned SE11N; likely intended code is SE11, but keep this as a verification note.
+  confidence: known_from_experience
+  source_refs: []

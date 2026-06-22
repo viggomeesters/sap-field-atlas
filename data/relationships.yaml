@@ -1,0 +1,39 @@
+- id: mara-primary-key-matnr
+  from: MARA
+  to: MARA-MATNR
+  relationship_type: primary_key
+  description: MARA-MATNR is the key material identifier for the MARA general material
+    data table.
+  confidence: known_from_experience
+  source_refs: []
+- id: se16n-displays-mara
+  from: SE16N
+  to: MARA
+  relationship_type: transaction_access
+  description: SE16N can be used to inspect MARA table data in systems where the user
+    has authorization.
+  confidence: known_from_experience
+  source_refs: []
+- id: product-number-template-maps-to-mara-matnr
+  from: s4-product-initial-seed
+  to: MARA-MATNR
+  relationship_type: template_mapping
+  description: Product Number in the initial Product migration seed maps to the canonical
+    material number field MARA-MATNR.
+  confidence: needs_verification
+  source_refs: []
+- id: t001-primary-key-bukrs
+  from: T001
+  to: T001-BUKRS
+  relationship_type: primary_key
+  description: T001-BUKRS is the key company code identifier for company-code customizing.
+  confidence: known_from_experience
+  source_refs: []
+- id: bukrs-customizing-value-source
+  from: T001-BUKRS
+  to: domain-bukrs-company-code
+  relationship_type: customizing_lookup
+  description: BUKRS is a customizing-managed company code value and should be validated
+    against target system customizing.
+  confidence: known_from_experience
+  source_refs: []

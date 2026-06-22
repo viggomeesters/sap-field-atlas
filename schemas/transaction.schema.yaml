@@ -1,0 +1,14 @@
+schema: sap-field-atlas.transaction.v1
+required: [code, purpose, category, systems, relevant_for, confidence, source_refs]
+identity: code
+fields:
+  code: SAP GUI transaction code, e.g. SE16N
+  name: optional display name
+  purpose: practical consultant-language purpose
+  category: data_viewer | metadata | master_data | customizing | programming | other
+  systems: [ECC, S4]
+  relevant_for: [data_migration, analysis, export, configuration, metadata_lookup]
+  related_tables: optional table ids
+  notes: optional strings
+  confidence: verified | known_from_experience | needs_verification
+  source_refs: list of source ids or URLs

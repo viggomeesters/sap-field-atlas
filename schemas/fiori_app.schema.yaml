@@ -1,0 +1,12 @@
+schema: sap-field-atlas.fiori-app.v1
+required: [id, name, purpose, confidence, source_refs]
+identity: id
+fields:
+  id: stable Fiori app id or local id
+  name: app name
+  purpose: practical use
+  related_tables: table ids
+  related_fields: field ids
+  migration_relevance: notes
+  confidence: verified | known_from_experience | needs_verification
+  source_refs: list

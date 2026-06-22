@@ -1,0 +1,9 @@
+- id: domain-bukrs-company-code
+  kind: customizing
+  description: Company Code value source; values should be checked against the target
+    system company-code customizing.
+  table: T001
+  field: T001-BUKRS
+  values: []
+  confidence: known_from_experience
+  source_refs: []

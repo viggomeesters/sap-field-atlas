@@ -1,0 +1,53 @@
+- id: MARA-MATNR
+  table: MARA
+  field: MATNR
+  business_meaning: Material Number
+  data_type: null
+  length: null
+  is_key: true
+  labels:
+    sap_en_short: Material
+    sap_en_long: Material Number
+    sap_nl_short: null
+    sap_nl_long: null
+    export_label: Material Number
+    migration_cockpit_label: Product Number
+  value_source:
+    kind: identifier
+    domain: null
+    lookup_table: null
+    customizing_managed: false
+  related_fields: []
+  migration_notes:
+  - Often appears as Product Number in S/4 or SAP Migration Cockpit context.
+  - Label and export text can differ between SAP GUI table view, export layout, logon
+    language, and template context.
+  confidence: known_from_experience
+  source_refs: []
+- id: T001-BUKRS
+  table: T001
+  field: BUKRS
+  business_meaning: Company Code
+  data_type: null
+  length: null
+  is_key: true
+  labels:
+    sap_en_short: CoCd
+    sap_en_long: Company Code
+    sap_nl_short: null
+    sap_nl_long: null
+    export_label: Company Code
+    migration_cockpit_label: null
+  value_source:
+    kind: customizing
+    domain: domain-bukrs-company-code
+    lookup_table: T001
+    customizing_managed: true
+  related_fields: []
+  migration_notes:
+  - Company code values are normally maintained in system customizing, not free-text
+    migration values.
+  - When a template asks for Company Code, map to the target system value set and
+    validate against customizing.
+  confidence: known_from_experience
+  source_refs: []

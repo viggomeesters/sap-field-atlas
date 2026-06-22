@@ -1,0 +1,17 @@
+schema: sap-field-atlas.migration-template.v1
+required: [template_id, object, variant, source_system, target_system, fields, confidence, source_refs]
+identity: template_id
+fields:
+  template_id: stable local id
+  object: migration object name, e.g. Product
+  variant: direct_table_write | s4_structure | api | needs_verification
+  source_system: ECC | S4 | legacy | unknown
+  target_system: S4 | unknown
+  fields:
+    - template_field: template label
+      canonical_field: field id
+      labels: optional short/long labels
+      confidence: confidence level
+  notes: strings
+  confidence: verified | known_from_experience | needs_verification
+  source_refs: list

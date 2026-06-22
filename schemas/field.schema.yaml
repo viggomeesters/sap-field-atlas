@@ -1,0 +1,27 @@
+schema: sap-field-atlas.field.v1
+required: [id, table, field, business_meaning, is_key, labels, value_source, confidence, source_refs]
+identity: id
+fields:
+  id: canonical TABLE-FIELD id, e.g. MARA-MATNR
+  table: table id
+  field: SAP technical field name
+  business_meaning: practical meaning
+  data_type: SAP datatype if known
+  length: length if known
+  is_key: boolean
+  labels:
+    sap_en_short: nullable string
+    sap_en_long: nullable string
+    sap_nl_short: nullable string
+    sap_nl_long: nullable string
+    export_label: nullable string
+    migration_cockpit_label: nullable string
+  value_source:
+    kind: free_text | identifier | customizing | domain | check_table | lookup_table | unknown
+    domain: nullable string
+    lookup_table: nullable table id
+    customizing_managed: boolean
+  related_fields: field ids
+  migration_notes: strings
+  confidence: verified | known_from_experience | needs_verification
+  source_refs: list

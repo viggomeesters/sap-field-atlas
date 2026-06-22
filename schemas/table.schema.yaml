@@ -1,0 +1,15 @@
+schema: sap-field-atlas.table.v1
+required: [name, business_object, description, key_fields, confidence, source_refs]
+identity: name
+fields:
+  name: SAP table name, e.g. MARA
+  business_object: functional object, e.g. Material Master
+  module: SAP module/context
+  system_scope: ECC | S4 | both | unknown
+  description: practical meaning
+  key_fields: field ids such as MARA-MATNR
+  common_transactions: transaction codes
+  related_tables: related table ids
+  migration_relevance: why this matters in migration work
+  confidence: verified | known_from_experience | needs_verification
+  source_refs: list
