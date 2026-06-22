@@ -32,6 +32,7 @@ REQUIRED_PUBLIC_REPO_FILES = [
     "Makefile",
     "assets/repo-hero.svg",
     "docs/ARCHITECTURE.md",
+    "docs/HERO_GUIDELINES.md",
     "docs/PACKAGE.md",
     "docs/REPO_COMPLETE.md",
     "docs/ROADMAP.md",
@@ -104,6 +105,13 @@ def check_public_boundary() -> None:
     for required_phrase in ("![SAP Field Atlas repository hero]", "## Package and release", "## Contributors"):
         if required_phrase not in readme:
             fail(f"README missing professional public surface section: {required_phrase}")
+    hero = (ROOT / "assets" / "repo-hero.svg").read_text()
+    forbidden_hero_fragments = ("<filter", "feGaussianBlur", "stdDeviation=", "dropShadow", "filter=")
+    for fragment in forbidden_hero_fragments:
+        if fragment in hero:
+            fail(f"repo hero uses fuzzy/blur-prone SVG fragment: {fragment}")
+    if "width=\"1000\"" not in hero or "height=\"360\"" not in hero:
+        fail("repo hero must use the crisp README-scale 1000x360 canvas")
     for rel, path in iter_text_files():
         if rel in ALLOW_SELF:
             continue

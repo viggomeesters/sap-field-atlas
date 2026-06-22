@@ -14,6 +14,7 @@ Applied from Viggo's `viggo-agent-skills` operating conventions to this public r
 - [x] Repository topics are set for discoverability.
 - [x] README has a professional hero, badges, problem statement, quick start, examples, package/release section, safety boundary, and contributors link.
 - [x] `assets/repo-hero.svg` gives the repo a visual identity.
+- [x] `docs/HERO_GUIDELINES.md` defines visual QA requirements: crisp at README scale, not zoomed out, not busy, no text overflow, no fuzzy filters/shadows.
 - [x] `CONTRIBUTORS.md` exists.
 
 ## Release and package
