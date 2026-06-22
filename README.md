@@ -56,11 +56,21 @@ Examples:
 
 ## Commands
 
+Recommended full gate:
+
+```bash
+make check
+```
+
+Individual commands:
+
 ```bash
 uv run sap-field-atlas validate
 uv run sap-field-atlas audit-completeness
 uv run pytest -q
 ```
+
+See `docs/REPO_COMPLETE.md` for the repository-complete checklist.
 
 ## Layout
 
